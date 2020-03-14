@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .button{
+            margin: 20px;
+            border-radius: 50px;
+            width: 80px;
+            height: 80px;
+            background-color: greenyellow;
+            box-shadow: 12px 6px 20px rgba(0,0,0,1);
+        }
+        div {
+            margin-left: 500px;
+            font-size: 20px;
+            font-family: "cool font", Serif;
+        }
+        .p{
+            margin-left: 700px;
+        }
+
+        @font-face {
+         font-family: "cool font";
+         src: url("19081.ttf");
+        }
+    </style>
+</head>
+<body>
+        <div>
+            <p>1.Сколько лет планете Земля? <br></p>
+        <input type="radio" name="answer1" id="1.1">a)4.543 млрд <br>
+        <input type="radio" name="answer1" id="1.2" >б)2.4 млрд <br>
+        <input type="radio" name="answer1" id="1.3">в)3.7 млрд <br>
+        <input type="radio" name="answer1" id="1.4">г)6.3 млрд <br>
+        </div>
+        <div>
+        <p>2.Как называется наша галактика? <br></p>
+        <input type="radio" name="answer2" id="2.1">a)Галактика <br>
+        <input type="radio" name="answer2" id="2.2">б)Мирен <br>
+        <input type="radio" name="answer2" id="2.3">в)Земля <br>
+        <input type="radio" name="answer2" id="2.4">г)Млечный путь <br>
+         </div>
+        <div>
+        <p>3.как называется устройство обработки информации в компьютере? <br></p>
+        <input type="radio" name="answer3" id="3.1">a)ОЗУ <br>
+        <input type="radio" name="answer3" id="3.2">б)Память <br>
+        <input type="radio" name="answer3" id="3.3">в)Процесссор <br>
+        <input type="radio" name="answer3" id="3.4">г)Блок питания <br>
+        </div>
+        <div>
+        <p>4.сколько гигабайт в одном терабайте? <br></p>
+        <input type="radio" name="answer4" id="4.1">a)100 Гб <br>
+        <input type="radio" name="answer4" id="4.2">б)1000 Гб <br>
+        <input type="radio" name="answer4" id="4.3">в)8 Гб <br>
+        <input type="radio" name="answer4" id="4.4">г)500 Гб <br>
+         </div>
+        <div>
+        <p>5.ПК-.... <br></p>
+        <input type="radio" name="answer5" id="5.1">a)Пекинская Капуста <br>
+        <input type="radio" name="answer5" id="5.2">б)Персональный Компьютер <br>
+        <input type="radio" name="answer5" id="5.3">в)Первый Краб <br>
+        <input type="radio" name="answer5" id="5.4">г)Поле копеек <br>
+         </div>
+        <div>
+        <button onclick="proverka()" class="button">Проверить</button>
+         </div>
+    </p>
+    </div>
+    <p id="kol" class="p"></p>
+    <script>
+        right= 0
+        function proverka() {
+            if (document.getElementById("1.1").checked) {
+                right++
+            }
+            if (document.getElementById("2.4").checked) {
+                right++
+            }
+            if (document.getElementById("3.3").checked) {
+                right++
+            }
+            if (document.getElementById("4.2").checked) {
+                right++
+            }
+            if (document.getElementById("5.2").checked) {
+                right++
+            }
+            document.getElementById("kol").innerHTML = right
+         }
+    </script>
+</body>
+</html>
